@@ -25,6 +25,12 @@ const CreateUser = () => {
     };
 
     dispatch(addUser(newUser));
+
+    name.current.value = "";
+    email.current.value = "";
+    age.current.value = "";
+    profession.current.value = "";
+    setGender(null);
   };
 
   return (
@@ -92,7 +98,10 @@ const CreateUser = () => {
             </label>
           </div>
         </div>
-        <button className="border-2 rounded-lg w-full py-3 text-[#8b4f80] bg-[#b9c0d5] text-xl hover:bg-slate-400">
+        <button
+          onClick={() => handleSubmit}
+          className="border-2 rounded-lg w-full py-3 text-[#8b4f80] bg-[#b9c0d5] text-xl hover:bg-slate-400"
+        >
           Submit
         </button>
       </form>
